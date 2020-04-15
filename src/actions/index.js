@@ -5,16 +5,16 @@ import { tastedive, themoviedb } from '../utils/links'
 
 export const saveAccessToken = token => ({
   type: 'SAVE_TOKEN',
-  token,
+  token
 })
 
 export const moviesFetched = movies => ({
   type: 'FETCH_MOVIES_SUCCESS',
-  movies,
+  movies
 })
 
 export const fetchingError = () => ({
-  type: 'FETCH_MOVIES_FAILURE',
+  type: 'FETCH_MOVIES_FAILURE'
 })
 
 export const fetchOnboardingMovies = () => (dispatch, getState) => {
@@ -33,7 +33,7 @@ export const fetchOnboardingMovies = () => (dispatch, getState) => {
   const movieRequest = new GraphRequest(
     '/me/movies',
     {
-      accessToken: token,
+      accessToken: token
     },
     responseInfoCallback
   )
@@ -43,11 +43,11 @@ export const fetchOnboardingMovies = () => (dispatch, getState) => {
 
 export const movieData = movie => ({
   type: 'MOVIE_DATA_SUCCESS',
-  movie,
+  movie
 })
 
 export const movieDataError = () => ({
-  type: 'MOVIE_DATA_FAILURE',
+  type: 'MOVIE_DATA_FAILURE'
 })
 
 export const getMovieData = movieName => dispatch => {
@@ -64,25 +64,25 @@ export const getMovieData = movieName => dispatch => {
 
 export const setOnboardingMovies = movies => ({
   type: 'SET_ONBOARDING_MOVIES',
-  movies,
+  movies
 })
 
 export const similarMovies = movies => ({
   type: 'SIMILAR_MOVIES_SUCCESS',
-  movies,
+  movies
 })
 
 export const similarMoviesError = () => ({
-  type: 'SIMILAR_MOVIES_FAILURE',
+  type: 'SIMILAR_MOVIES_FAILURE'
 })
 
 export const similarMoviesList = movie => ({
   type: 'SIMILAR_MOVIES_LIST_SUCCESS',
-  movie,
+  movie
 })
 
 export const similarMoviesListError = () => ({
-  type: 'SIMILAR_MOVIES_LIST_FAILURE',
+  type: 'SIMILAR_MOVIES_LIST_FAILURE'
 })
 
 const getSimilarMovieData = movieName => dispatch => {
@@ -106,10 +106,12 @@ const fetchSimilarMovies = () => (dispatch, getState) => {
     .map(el => el.split(' ').join('+'))
     .join('%2C+')
   const URL = tastedive(tastediveKey, 'movies', result)
+
   return axios
     .get(URL)
     .then(data => {
       dispatch(similarMovies(data))
+
       return data.data.Similar.Results
     })
     .catch(err => console.log(err))
@@ -123,5 +125,5 @@ export const getSimilarMovies = () => dispatch => {
 
 export const setMovieToWatch = movie => ({
   type: 'MOVIE_TO_WATCH_ADDED',
-  movie,
+  movie
 })

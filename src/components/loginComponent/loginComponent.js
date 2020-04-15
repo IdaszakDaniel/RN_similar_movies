@@ -25,28 +25,28 @@ const Login = ({ navigation: { navigate } }) => {
     }
   }
 
-  const getAccesToken = () =>
-    AccessToken.getCurrentAccessToken().then(data => {
-      const token = data.accessToken.toString()
-      storeData(token)
-      dispatch(saveAccessToken(token))
-      navigate('Onboarding')
-    })
+  const getAccesToken = () => AccessToken.getCurrentAccessToken().then(data => {
+    const token = data.accessToken.toString()
+    storeData(token)
+    dispatch(saveAccessToken(token))
+    navigate('Onboarding')
+  })
 
   const loginSuccess = result => {
     if (result.isCancelled) {
       console.log('Login cancelled')
     } else {
-      console.log(`Login success with permissions: ${result.grantedPermissions.toString()}`)
+      console.log(
+        `Login success with permissions: ${result.grantedPermissions.toString()}`
+      )
       getAccesToken()
     }
   }
 
-  const login = () =>
-    LoginManager.logInWithReadPermissions(['public_profile', 'user_likes']).then(
-      loginSuccess,
-      error => console.log(`Login fail with error: ${error}`)
-    )
+  const login = () => LoginManager.logInWithPermissions(['public_profile', 'user_likes']).then(
+    loginSuccess,
+    error => console.log(`Login fail with error: ${error}`)
+  )
 
   return <LoginInterface onPress={login} />
 }

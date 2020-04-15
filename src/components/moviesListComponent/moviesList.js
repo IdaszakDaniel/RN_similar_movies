@@ -1,6 +1,10 @@
 import React from 'react'
 import { RkChoice } from 'react-native-ui-kitten'
-import { Text, FlatList, View } from 'react-native'
+import {
+  Text,
+  FlatList,
+  View
+} from 'react-native'
 import styles from './moviesListComponent.styles'
 
 const MoviesList = ({ moviesList, selectItem }) => {

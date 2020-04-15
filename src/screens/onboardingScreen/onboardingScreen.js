@@ -7,7 +7,7 @@ const OnboardingScreen = ({ navigation: { navigate } }) => {
   const [movies, setMovies] = useState(null)
   const dispatch = useDispatch()
 
-  useEffect(() => dispatch(fetchOnboardingMovies()), [])
+  useEffect(() => dispatch(fetchOnboardingMovies()), [dispatch])
 
   const submit = () => {
     dispatch(setOnboardingMovies(movies))

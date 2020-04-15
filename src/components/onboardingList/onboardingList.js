@@ -1,5 +1,9 @@
 import React, { useReducer } from 'react'
-import { View, Button, Text } from 'react-native'
+import {
+  View,
+  Button,
+  Text
+} from 'react-native'
 import styles from './styles'
 import ListComponent from '../listComponent'
 
@@ -33,17 +37,25 @@ const OnboardingList = ({ selectedMovies, submit }) => {
     </View>
   )
 
-  const changeCounter = val => (val ? dispatch({ type: 'dec' }) : dispatch({ type: 'inc' }))
+  const changeCounter = val => (val ? dispatch({ type: 'inc' }) : dispatch({ type: 'dec' }))
 
   const { mainContainer, listContainer } = styles
+
   return (
     <View style={mainContainer}>
       <View style={listContainer}>
         <View style={styles.headerWrapper}>
           <Text style={styles.headerTitle}>Pick at least 3 movies:</Text>
-          <Text style={styles.headerCounter}>{state.count} Picked</Text>
+          <Text style={styles.headerCounter}>
+            {state.count}
+            {' '}
+            Picked
+          </Text>
         </View>
-        <ListComponent selectedMovies={selectedMovies} changeCounter={changeCounter} />
+        <ListComponent
+          selectedMovies={selectedMovies}
+          changeCounter={changeCounter}
+        />
       </View>
       {renderButton()}
     </View>

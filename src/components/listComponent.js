@@ -10,7 +10,7 @@ const ListComponent = ({ selectedMovies, changeCounter }) => {
 
   const { movies, moviesList = [] } = useSelector(state => ({
     movies: state.movies,
-    moviesList: state.moviesList,
+    moviesList: state.moviesList
   }))
 
   useEffect(() => {
@@ -20,12 +20,12 @@ const ListComponent = ({ selectedMovies, changeCounter }) => {
       })
       setmoviesFetched(true)
     }
-  }, [movies, moviesList])
+  }, [dispatch, movies, moviesFetched, moviesList])
 
   const changeFavMovies = (val, item) => {
     changeCounter(val)
     let newFavMovies = [...favMovies]
-    if (!val) {
+    if (val) {
       newFavMovies.push(item)
     } else {
       newFavMovies = favMovies.filter(el => el.data.id !== item.data.id)
