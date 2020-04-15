@@ -1,11 +1,13 @@
 import React from 'react'
-import { Text, FlatList, View, ImageBackground, TouchableOpacity } from 'react-native'
+import {
+  Text, FlatList, View, ImageBackground, TouchableOpacity
+} from 'react-native'
 import { withNavigation } from 'react-navigation'
 import styles from './styles'
 import { tmdbImage } from '../../utils/images'
 
 const MoviesListDetailed = ({ movies, navigation: { navigate } }) => {
-  const keyExtractor = item => item.id
+  const keyExtractor = item => item.data.id.toString()
 
   const renderItem = ({ item }) => {
     const uri = tmdbImage(item.data.poster_path)
