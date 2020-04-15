@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { AsyncStorage } from 'react-native'
+import { AsyncStorage } from '@react-native-community/async-storage'
 import { useDispatch } from 'react-redux'
 import { withNavigation } from 'react-navigation'
 import { AccessToken, LoginManager } from 'react-native-fbsdk'
