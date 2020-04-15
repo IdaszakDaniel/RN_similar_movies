@@ -8,7 +8,7 @@ import {
 import styles from './moviesListComponent.styles'
 
 const MoviesList = ({ moviesList, selectItem }) => {
-  const keyExtractor = item => item.id
+  const keyExtractor = item => item.data.id.toString()
 
   const { itemContainer, checkBox, itemTitle, listWrapper } = styles
 
