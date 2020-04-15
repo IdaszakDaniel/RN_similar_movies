@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { AsyncStorage } from '@react-native-community/async-storage'
+import AsyncStorage from '@react-native-community/async-storage'
 import { useDispatch } from 'react-redux'
 import { withNavigation } from 'react-navigation'
 import { AccessToken, LoginManager } from 'react-native-fbsdk'
@@ -11,7 +11,12 @@ const Login = ({ navigation: { navigate } }) => {
 
   useEffect(() => {
     const bootstrapAsync = async () => {
-      const userToken = await AsyncStorage.getItem('userToken')
+      let userToken = null
+      try {
+        userToken = await AsyncStorage.getItem('userToken')
+      } catch (err) {
+        console.warn(err)
+      }
       navigate(userToken ? 'Onboarding' : 'Auth')
     }
     bootstrapAsync()

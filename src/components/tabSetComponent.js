@@ -7,10 +7,7 @@ import MoviesToWatch from './moviesToWatch'
 const TabSetComponent = () => {
   const [selectedTab, setSelectedTab] = useState()
 
-  const renderTab = () => {
-    if (selectedTab === 1) return <MoviesToWatch />
-    return <MyMovies />
-  }
+  const renderTab = () => (selectedTab === 1 ? <MoviesToWatch /> : <MyMovies />)
 
   return (
     <View style={{ flex: 1 }}>
