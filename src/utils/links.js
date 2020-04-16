@@ -1,3 +1,9 @@
-export const tastedive = (key, type, result) => `https://tastedive.com/api/similar?k=${key}&type=${type}&q=${result}`
+import Config from 'react-native-config'
 
-export const themoviedb = (query, key) => `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${key}`
+export const tastedive = (
+  key,
+  type,
+  result
+) => `${Config.TASTEDIVE_LINK}?k=${key}&type=${type}&q=${result}`
+
+export const themoviedb = (query, key) => `${Config.THE_MOVIE_DB_LINK}${query}&api_key=${key}`
