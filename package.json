@@ -8,14 +8,17 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
+    "lint1": "eslint 'src/**/*.tsx'",
     "pod": " pod-install ios"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.9.0",
     "@react-native-community/masked-view": "^0.1.9",
     "@react-navigation/native": "^5.1.5",
+    "@types/react-navigation": "^3.4.0",
     "axios": "^0.19.2",
     "lodash": "^4.17.15",
+    "prop-types": "^15.7.2",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-bouncing-preloader": "^1.0.1",
@@ -45,8 +48,14 @@
     "@babel/plugin-transform-template-literals": "^7.7.4",
     "@babel/runtime": "^7.6.2",
     "@react-native-community/eslint-config": "^0.0.5",
+    "@types/jest": "^25.2.1",
+    "@types/react": "^16.9.34",
+    "@types/react-native": "^0.62.2",
+    "@types/react-test-renderer": "^16.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "@typescript-eslint/parser": "^2.28.0",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.5.1",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-import-resolver-babel-module": "^5.1.0",
     "eslint-import-resolver-reactnative": "^1.0.2",
@@ -59,7 +68,8 @@
     "metro-react-native-babel-preset": "^0.58.0",
     "prettier": "^1.18.2",
     "react-test-renderer": "16.11.0",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "typescript": "^3.8.3"
   },
   "jest": {
     "preset": "react-native"
