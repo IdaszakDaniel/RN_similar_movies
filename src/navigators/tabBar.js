@@ -7,7 +7,7 @@ import ProfileScreen from '../screens/profileScreen/profileScreen'
 const TabBar = createBottomTabNavigator(
   {
     Home: HomeScreen,
-    Profile: ProfileScreen,
+    Profile: ProfileScreen
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -15,19 +15,20 @@ const TabBar = createBottomTabNavigator(
         const { routeName } = navigation.state
         let iconName
         if (routeName === 'Home') {
-          iconName = `ios-videocam`
+          iconName = 'ios-videocam'
         } else if (routeName === 'Profile') {
-          iconName = `ios-person`
+          iconName = 'ios-person'
         }
+
         return <Ionicons name={iconName} size={horizontal ? 20 : 25} color={tintColor} />
-      },
+      }
     }),
     tabBarOptions: {
       activeTintColor: 'blue',
       inactiveTintColor: 'gray',
       activeBackgroundColor: '#FAFAFA',
-      inactiveBackgroundColor: '#FAFAFA',
-    },
+      inactiveBackgroundColor: '#FAFAFA'
+    }
   }
 )
 

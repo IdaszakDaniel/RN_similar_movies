@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
   mainTitle: {
     fontSize: 25,
-    marginBottom: 40,
+    marginBottom: 40
   },
   facebookButton: {
     width: '70%',
@@ -12,13 +12,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingHorizontal: 7,
     borderRadius: 5,
-    alignItems: 'center',
+    alignItems: 'center'
   },
   facebookButtonText: {
     fontWeight: 'bold',
     color: 'white',
     marginLeft: 15,
-    fontSize: 18,
-  },
+    fontSize: 18
+  }
 })
 export default styles

@@ -7,9 +7,9 @@ export default createSwitchNavigator(
   {
     App: MainNavigator,
     Auth: LoginScreen,
-    Onboarding: OnboardingScreen,
+    Onboarding: OnboardingScreen
   },
   {
-    initialRouteName: 'Auth',
+    initialRouteName: 'Auth'
   }
 )

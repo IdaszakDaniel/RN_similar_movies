@@ -5,15 +5,15 @@ import DetailsScreen from '../screens/detailsScreen/detailsScreen'
 const MainNavigator = createStackNavigator(
   {
     Main: {
-      screen: TabBar,
+      screen: TabBar
     },
     Details: {
-      screen: DetailsScreen,
-    },
+      screen: DetailsScreen
+    }
   },
   {
     mode: 'modal',
-    headerMode: 'none',
+    headerMode: 'none'
   }
 )
 

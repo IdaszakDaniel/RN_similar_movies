@@ -7,21 +7,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginVertical: 5,
     borderBottomColor: 'gray',
-    borderBottomWidth: 1,
+    borderBottomWidth: 1
   },
   itemTitle: {
     width: '70%',
     height: '100%',
-    paddingLeft: 20,
+    paddingLeft: 20
   },
   checkBox: {
     backgroundColor: 'gray',
-    marginRight: 20,
+    marginRight: 20
   },
   listWrapper: {
     width: '100%',
-    height: '100%',
-  },
+    height: '100%'
+  }
 })
 
 export default styles

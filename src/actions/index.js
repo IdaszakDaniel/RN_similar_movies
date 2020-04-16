@@ -102,7 +102,7 @@ const fetchSimilarMovies = () => (dispatch, getState) => {
   const result = state.onboardingMovies
     .map(el => el.title)
     .map(el => el.split('&').join('%26'))
-    .map(el => el.split("'").join('%27'))
+    .map(el => el.split('\'').join('%27'))
     .map(el => el.split(' ').join('+'))
     .join('%2C+')
   const URL = tastedive(tastediveKey, 'movies', result)

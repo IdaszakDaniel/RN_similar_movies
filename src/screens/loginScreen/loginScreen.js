@@ -5,6 +5,7 @@ import Login from '../../components/loginComponent/loginComponent'
 
 const LoginScreen = () => {
   const { container } = styles
+
   return (
     <View style={container}>
       <Login />
