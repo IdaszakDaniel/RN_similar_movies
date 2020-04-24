@@ -1,32 +1,38 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, ViewStyle, ImageStyle, TextStyle } from 'react-native'
 
-const styles = StyleSheet.create({
+interface Style {
+  mainContainer: ViewStyle
+  listContainer: ViewStyle
+  buttonContainer: ViewStyle
+  buttonWrapper: ViewStyle
+  headerWrapper: ViewStyle
+  headerTitle: TextStyle
+  headerCounter: TextStyle
+}
+
+const styles = StyleSheet.create<Style>({
   mainContainer: {
-    flex: 1
+    flex: 1,
   },
   listContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 70
+    marginTop: 70,
   },
   buttonContainer: {
     position: 'absolute',
     bottom: 20,
     height: '10%',
     width: '100%',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   buttonWrapper: {
     width: '60%',
     borderRadius: 50,
     height: 60,
     backgroundColor: 'blue',
-    justifyContent: 'center'
-  },
-  button: {
-    width: '100%',
-    height: '100%'
+    justifyContent: 'center',
   },
   headerWrapper: {
     height: 40,
@@ -40,19 +46,19 @@ const styles = StyleSheet.create({
     shadowColor: '#000000',
     shadowOffset: {
       width: 0,
-      height: 6
+      height: 6,
     },
     shadowOpacity: 0.39,
     shadowRadius: 8.3,
-    elevation: 13
+    elevation: 13,
   },
   headerTitle: {
     fontSize: 18,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   headerCounter: {
     fontSize: 12,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 })
 export default styles

@@ -1,6 +1,13 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, ViewStyle, TextStyle } from 'react-native'
 
-const styles = StyleSheet.create({
+interface Style {
+  itemContainer: ViewStyle
+  itemTitle: TextStyle
+  checkBox: ViewStyle
+  listWrapper: ViewStyle
+}
+
+const styles = StyleSheet.create<Style>({
   itemContainer: {
     height: 50,
     flexDirection: 'row',
