@@ -1,16 +1,15 @@
 import React from 'react'
 import { View } from 'react-native'
 import styles from './styles'
-import Login from '../../components/loginComponent/loginComponent'
+import TabSetComponent from '../../components/tabSetComponent'
 
-const LoginScreen = () => {
+const ProfileScreen: React.FC = () => {
   const { container } = styles
-
   return (
     <View style={container}>
-      <Login />
+      <TabSetComponent />
     </View>
   )
 }
 
-export default LoginScreen
+export default ProfileScreen
