@@ -1,30 +1,16 @@
 import React from 'react'
-import { fireEvent, render, waitForElement } from 'react-native-testing-library'
+import { fireEvent, waitForElement } from 'react-native-testing-library'
 import OnboardingList from './onboardingList'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import ReduxThunk from 'redux-thunk'
-import reducer from '../../reducers/index'
 import { toContainElement, toBeDisabled, toBeEnabled, toHaveStyle } from '@testing-library/jest-native'
 import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
+import renderWithRedux from '../../utils/testUtils'
 
 expect.extend({ toContainElement, toBeDisabled, toBeEnabled, toHaveStyle })
 
 const props = {
   selectedMovies: () => {},
   submit: () => {}
-}
-
-function renderWithRedux(
-  ui, 
-  initialState,
-  store = createStore(reducer, initialState, applyMiddleware(ReduxThunk))
-) {
-  return {
-    ...render(<Provider store={store}>{ui}</Provider>),
-    store,
-  }
 }
 
 describe('OnboardingList', () => {
