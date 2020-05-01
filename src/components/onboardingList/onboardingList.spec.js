@@ -1,15 +1,15 @@
 import React from 'react'
-import { render, waitForElement } from 'react-native-testing-library'
+import { fireEvent, render, waitForElement } from 'react-native-testing-library'
 import OnboardingList from './onboardingList'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import ReduxThunk from 'redux-thunk'
 import reducer from '../../reducers/index'
-import { toContainElement, toBeDisabled, toBeEnabled } from '@testing-library/jest-native'
+import { toContainElement, toBeDisabled, toBeEnabled, toHaveStyle } from '@testing-library/jest-native'
 import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
 
-expect.extend({ toContainElement, toBeDisabled, toBeEnabled })
+expect.extend({ toContainElement, toBeDisabled, toBeEnabled, toHaveStyle })
 
 const props = {
   selectedMovies: () => {},
@@ -53,6 +53,17 @@ describe('OnboardingList', () => {
     it('has button disabled', () => {
       const { queryByTestId } = renderWithRedux(<OnboardingList {...props} />, { movies, moviesList: [] })
       expect(queryByTestId('sendButton')).toBeDisabled()
+    })
+
+    it('has element picked', async () => {
+      const { getByTestId, getByText } = renderWithRedux(<OnboardingList {...props} />, { movies, moviesList: [] })
+
+      let selectButton
+      let label
+      await waitForElement(() => selectButton = getByTestId('RkChoice'))
+      fireEvent(selectButton, 'onChange', true)
+      await waitForElement(() => label = getByText('1 Picked'))
+      expect(label).toHaveStyle({ fontSize: 12 })
     })
   })
 })
