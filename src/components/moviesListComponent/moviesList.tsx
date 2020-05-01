@@ -42,6 +42,7 @@ const MoviesList: React.FC<Props> = ({ moviesList, selectItem }) => {
         <Text>{item.title}</Text>
       </View>
       <RkChoice
+        testID="RkChoice"
         rkType="clear"
         selected={false}
         onChange={setOnChange(item)}
@@ -53,11 +54,11 @@ const MoviesList: React.FC<Props> = ({ moviesList, selectItem }) => {
   return (
     <View style={listWrapper}>
       <FlatList
+        testID="flatlist"
         data={moviesList}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         showsVerticalScrollIndicator={false}
-        // contentContainerStyle={{ marginBottom: 200 }}
       />
     </View>
   )
