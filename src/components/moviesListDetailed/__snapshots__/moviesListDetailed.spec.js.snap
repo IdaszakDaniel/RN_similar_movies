@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviesListDetailed 1... renders properly 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "data": Object {
+          "id": 1,
+          "poster_path": "poster1.png",
+        },
+        "title": "testTitle1",
+      },
+      Object {
+        "data": Object {
+          "id": 2,
+          "poster_path": "poster2.png",
+        },
+        "title": "testTitle2",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "overflow": "hidden",
+    }
+  }
+  testID="flatlist"
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID="item"
+      >
+        <View
+          style={
+            Object {
+              "height": 250,
+              "marginHorizontal": 15,
+              "marginVertical": 5,
+              "overflow": "hidden",
+              "width": 712.5,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": "100%",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "http://image.tmdb.org/t/p/w185/poster1.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                  Object {
+                    "borderRadius": 10,
+                    "resizeMode": "cover",
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "backgroundColor": "rgba(0,0,0,0.5)",
+                  "borderRadius": 10,
+                  "height": "100%",
+                  "padding": 10,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "bottom": 10,
+                    "color": "white",
+                    "fontSize": 24,
+                    "fontWeight": "bold",
+                    "left": 10,
+                    "position": "absolute",
+                  }
+                }
+              >
+                testTitle1
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID="item"
+      >
+        <View
+          style={
+            Object {
+              "height": 250,
+              "marginHorizontal": 15,
+              "marginVertical": 5,
+              "overflow": "hidden",
+              "width": 712.5,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": "100%",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "http://image.tmdb.org/t/p/w185/poster2.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                  Object {
+                    "borderRadius": 10,
+                    "resizeMode": "cover",
+                  },
+                ]
+              }
+            />
+            <View
+              style={
+                Object {
+                  "backgroundColor": "rgba(0,0,0,0.5)",
+                  "borderRadius": 10,
+                  "height": "100%",
+                  "padding": 10,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "bottom": 10,
+                    "color": "white",
+                    "fontSize": 24,
+                    "fontWeight": "bold",
+                    "left": 10,
+                    "position": "absolute",
+                  }
+                }
+              >
+                testTitle2
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

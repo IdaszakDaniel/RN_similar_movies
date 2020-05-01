@@ -7,19 +7,9 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from 'react-native'
-import { withNavigation, NavigationScreenProp } from 'react-navigation'
-import { shape, string, arrayOf } from 'prop-types'
-import styles from './styles'
+import { withNavigation, NavigationInjectedProps } from 'react-navigation'
+import styles from './moviesListDetailed.style'
 import { tmdbImage } from '../../utils/images'
-
-type itemType = {
-  item: {
-    data: {
-      poster_path: string
-    }
-    title: string
-  }
-}
 
 type keyType = {
   data: {
@@ -29,12 +19,15 @@ type keyType = {
   title: string
 }
 
-export interface Props {
-  movies: ReadonlyArray<keyType>
-  navigation: NavigationScreenProp
+type itemType = {
+  item: keyType
 }
 
-const MoviesListDetailed: React.FC<Props> = ({
+export interface Props extends NavigationInjectedProps {
+  movies: ReadonlyArray<keyType>
+}
+
+export const MoviesListDetailed: React.FC<Props> = ({
   movies,
   navigation: { navigate },
 }): JSX.Element => {
@@ -51,7 +44,9 @@ const MoviesListDetailed: React.FC<Props> = ({
     } = styles
 
     return (
-      <TouchableOpacity onPress={(): Function => navigate('Details')}>
+      <TouchableOpacity
+        onPress={(): Boolean => navigate('Details')}
+        testID="item">
         <View style={itemContainer}>
           <ImageBackground
             source={{ uri }}
@@ -68,26 +63,13 @@ const MoviesListDetailed: React.FC<Props> = ({
 
   return (
     <FlatList
+      testID="flatlist"
       data={movies}
       renderItem={renderItem}
       keyExtractor={keyExtractor}
       style={styles.listContainer}
     />
   )
-}
-
-MoviesListDetailed.propTypes = {
-  movies: arrayOf(
-    shape({
-      item: shape({
-        data: shape({
-          poster_path: string,
-        }),
-        title: string,
-      }),
-    }),
-  ).isRequired,
-  navigation: NavigationScreenProp,
 }
 
 export default withNavigation(MoviesListDetailed)
