@@ -37,6 +37,7 @@ const OnboardingList: React.FC<Props> = ({ selectedMovies, submit }) => {
     <View style={styles.buttonContainer}>
       <View style={styles.buttonWrapper}>
         <Button
+          testID="sendButton"
           color="white"
           title="Next"
           onPress={submit}

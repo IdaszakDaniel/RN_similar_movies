@@ -48,32 +48,6 @@ describe('MoviesList:', () => {
       expect(onSelectMock).toHaveBeenCalledWith(movie[0], true)
     })
   })
-
-  // describe('Flatlist element', () => {
-  //   it('contains item with text', () => {
-  //     const { queryByTestId, getByText } = render(<MoviesList {...props} />)
-
-  //     const FlatList = queryByTestId('flatlist')
-  //     const ListItem = getByText('testTitle1')
-
-  //     expect(FlatList).toContainElement(ListItem)
-  //   })
-  // })
-
-  // describe('Flatlist element', () => {
-  //   it('returns proper data after click', () => {
-  //     const onSelectMock = jest.fn()
-  //     const props = {
-  //       moviesList: movie,
-  //       selectItem: onSelectMock
-  //     }
-  //     const { getByTestId } = render(<MoviesList {...props}/>)
-
-  //     fireEvent(getByTestId('RkChoice'), 'onChange', true)
-  //     expect(onSelectMock).toHaveBeenCalled()
-  //     expect(onSelectMock).toHaveBeenCalledWith(movie[0], true)
-  //   })
-  // })
 })
 
 

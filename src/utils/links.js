@@ -6,4 +6,4 @@ export const tastedive = (
   result
 ) => `${Config.TASTEDIVE_LINK}?k=${key}&type=${type}&q=${result}`
 
-export const themoviedb = (query, key) => `${Config.THE_MOVIE_DB_LINK}${query}&api_key=${key}`
+export const themoviedb = (query) => `${Config.THE_MOVIE_DB_LINK}${query}&api_key=${Config.API_KEY}`

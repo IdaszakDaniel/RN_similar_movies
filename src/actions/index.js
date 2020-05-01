@@ -52,7 +52,7 @@ export const movieDataError = () => ({
 
 export const getMovieData = movieName => dispatch => {
   const query = movieName.split(' ').join('%20')
-  const URL = themoviedb(query, apiKey)
+  const URL = themoviedb(query)
   axios
     .get(URL)
     .then(data => {
@@ -87,7 +87,7 @@ export const similarMoviesListError = () => ({
 
 const getSimilarMovieData = movieName => dispatch => {
   const query = movieName.split(' ').join('%20')
-  const URL = themoviedb(query, apiKey)
+  const URL = themoviedb(query)
   axios
     .get(URL)
     .then(data => {
