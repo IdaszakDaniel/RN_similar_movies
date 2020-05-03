@@ -1,8 +1,8 @@
 import React from 'react'
-import { RkChoice } from 'react-native-ui-kitten'
 import { Text, FlatList, View } from 'react-native'
 import styles from './moviesListComponent.styles'
 import { curry } from 'lodash'
+import CheckBoxComponent from '../checkboxComponent'
 
 type itemType = {
   item: singleItemType
@@ -34,20 +34,14 @@ const MoviesList: React.FC<Props> = ({ moviesList, selectItem }) => {
     selectItem(item, val),
   )
 
-  const { itemContainer, checkBox, itemTitle, listWrapper } = styles
+  const { itemContainer, itemTitle, listWrapper } = styles
 
   const renderItem = ({ item }: itemType): React.ReactElement => (
     <View style={itemContainer}>
       <View style={itemTitle}>
         <Text>{item.title}</Text>
       </View>
-      <RkChoice
-        testID="RkChoice"
-        rkType="clear"
-        selected={false}
-        onChange={setOnChange(item)}
-        style={checkBox}
-      />
+      <CheckBoxComponent onChange={setOnChange(item)} />
     </View>
   )
 

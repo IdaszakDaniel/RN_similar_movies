@@ -83,8 +83,14 @@ exports[`MoviesList: Flatlist element renders correctly 1`] = `
             </Text>
           </View>
           <View
+            accessibilityRole="checkbox"
+            accessibilityState={
+              Object {
+                "checked": false,
+              }
+            }
             accessible={true}
-            focusable={true}
+            focusable={false}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -94,45 +100,97 @@ exports[`MoviesList: Flatlist element renders correctly 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "alignSelf": "flex-start",
-                "backgroundColor": "gray",
-                "borderColor": "#0000001A",
-                "borderRadius": 4,
-                "borderWidth": 0,
-                "marginRight": 20,
+                "margin": 0,
+                "marginLeft": 10,
+                "marginRight": 10,
                 "opacity": 1,
+                "padding": 0,
               }
             }
+            testID="checkBox"
           >
-            <Image
-              source={
+            <View
+              style={
                 Object {
-                  "testUri": "../../react-native-ui-kitten/src/assets/img/choice/empty.png",
+                  "alignItems": "center",
+                  "flexDirection": "row",
                 }
               }
-              style={
-                Array [
+            >
+              <Text
+                allowFontScaling={false}
+                onPress={[Function]}
+                style={
                   Array [
                     Object {
-                      "width": 20,
+                      "color": "#bfbfbf",
+                      "fontSize": 40,
                     },
                     Object {
-                      "height": 20,
+                      "minWidth": 40,
                     },
                     Object {
-                      "justifyContent": "center",
+                      "fontFamily": "FontAwesome",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
                     },
-                    Object {
-                      "alignItems": "center",
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#43484d",
+                    "fontWeight": "bold",
+                    "marginLeft": 10,
+                    "marginRight": 10,
+                  }
+                }
+                testID="checkboxTitle"
+                theme={
+                  Object {
+                    "colors": Object {
+                      "disabled": "hsl(208, 8%, 90%)",
+                      "divider": "#bcbbc1",
+                      "error": "#ff190c",
+                      "grey0": "#393e42",
+                      "grey1": "#43484d",
+                      "grey2": "#5e6977",
+                      "grey3": "#86939e",
+                      "grey4": "#bdc6cf",
+                      "grey5": "#e1e8ee",
+                      "greyOutline": "#bbb",
+                      "platform": Object {
+                        "android": Object {
+                          "error": "#f44336",
+                          "primary": "#2196f3",
+                          "secondary": "#9C27B0",
+                          "success": "#4caf50",
+                          "warning": "#ffeb3b",
+                        },
+                        "ios": Object {
+                          "error": "#ff3b30",
+                          "primary": "#007aff",
+                          "secondary": "#5856d6",
+                          "success": "#4cd964",
+                          "warning": "#ffcc00",
+                        },
+                      },
+                      "primary": "#2089dc",
+                      "searchBg": "#303337",
+                      "secondary": "#8F0CE8",
+                      "success": "#52c41a",
+                      "warning": "#faad14",
                     },
-                    Object {
-                      "margin": 4,
-                    },
-                  ],
-                  null,
-                ]
-              }
-            />
+                  }
+                }
+              >
+                
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -166,8 +224,14 @@ exports[`MoviesList: Flatlist element renders correctly 1`] = `
             </Text>
           </View>
           <View
+            accessibilityRole="checkbox"
+            accessibilityState={
+              Object {
+                "checked": false,
+              }
+            }
             accessible={true}
-            focusable={true}
+            focusable={false}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -177,45 +241,97 @@ exports[`MoviesList: Flatlist element renders correctly 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "alignSelf": "flex-start",
-                "backgroundColor": "gray",
-                "borderColor": "#0000001A",
-                "borderRadius": 4,
-                "borderWidth": 0,
-                "marginRight": 20,
+                "margin": 0,
+                "marginLeft": 10,
+                "marginRight": 10,
                 "opacity": 1,
+                "padding": 0,
               }
             }
+            testID="checkBox"
           >
-            <Image
-              source={
+            <View
+              style={
                 Object {
-                  "testUri": "../../react-native-ui-kitten/src/assets/img/choice/empty.png",
+                  "alignItems": "center",
+                  "flexDirection": "row",
                 }
               }
-              style={
-                Array [
+            >
+              <Text
+                allowFontScaling={false}
+                onPress={[Function]}
+                style={
                   Array [
                     Object {
-                      "width": 20,
+                      "color": "#bfbfbf",
+                      "fontSize": 40,
                     },
                     Object {
-                      "height": 20,
+                      "minWidth": 40,
                     },
                     Object {
-                      "justifyContent": "center",
+                      "fontFamily": "FontAwesome",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
                     },
-                    Object {
-                      "alignItems": "center",
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#43484d",
+                    "fontWeight": "bold",
+                    "marginLeft": 10,
+                    "marginRight": 10,
+                  }
+                }
+                testID="checkboxTitle"
+                theme={
+                  Object {
+                    "colors": Object {
+                      "disabled": "hsl(208, 8%, 90%)",
+                      "divider": "#bcbbc1",
+                      "error": "#ff190c",
+                      "grey0": "#393e42",
+                      "grey1": "#43484d",
+                      "grey2": "#5e6977",
+                      "grey3": "#86939e",
+                      "grey4": "#bdc6cf",
+                      "grey5": "#e1e8ee",
+                      "greyOutline": "#bbb",
+                      "platform": Object {
+                        "android": Object {
+                          "error": "#f44336",
+                          "primary": "#2196f3",
+                          "secondary": "#9C27B0",
+                          "success": "#4caf50",
+                          "warning": "#ffeb3b",
+                        },
+                        "ios": Object {
+                          "error": "#ff3b30",
+                          "primary": "#007aff",
+                          "secondary": "#5856d6",
+                          "success": "#4cd964",
+                          "warning": "#ffcc00",
+                        },
+                      },
+                      "primary": "#2089dc",
+                      "searchBg": "#303337",
+                      "secondary": "#8F0CE8",
+                      "success": "#52c41a",
+                      "warning": "#faad14",
                     },
-                    Object {
-                      "margin": 4,
-                    },
-                  ],
-                  null,
-                ]
-              }
-            />
+                  }
+                }
+              >
+                
+              </Text>
+            </View>
           </View>
         </View>
       </View>

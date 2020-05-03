@@ -43,7 +43,7 @@ describe('MoviesList:', () => {
       }
       const { getByTestId } = render(<MoviesList {...props}/>)
 
-      fireEvent(getByTestId('RkChoice'), 'onChange', true)
+      fireEvent(getByTestId('checkBox'), 'onChange', true)
       expect(onSelectMock).toHaveBeenCalled()
       expect(onSelectMock).toHaveBeenCalledWith(movie[0], true)
     })
