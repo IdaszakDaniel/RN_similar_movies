@@ -60,3 +60,4 @@ buck-out/
 
 api_keys.js
 .env
+GoogleService-Info.plist
