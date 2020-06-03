@@ -1,6 +1,5 @@
 import { GraphRequestManager, GraphRequest } from 'react-native-fbsdk'
 import axios from 'axios'
-import { apiKey, tastediveKey } from '../../api_keys'
 import { tastedive, themoviedb } from '../utils/links'
 
 export const saveAccessToken = token => ({
@@ -105,7 +104,7 @@ const fetchSimilarMovies = () => (dispatch, getState) => {
     .map(el => el.split('\'').join('%27'))
     .map(el => el.split(' ').join('+'))
     .join('%2C+')
-  const URL = tastedive(tastediveKey, 'movies', result)
+  const URL = tastedive('movies', result)
 
   return axios
     .get(URL)
