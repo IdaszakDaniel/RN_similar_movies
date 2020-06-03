@@ -30,6 +30,7 @@ jobs:
           cd ios && pod install
       - name: Build app
         run: |
+          cd ios
           xcodebuild -workspace similarMovies.xcworkspace -scheme similarMovies archive -archivePath similarMovies.xcarchive -allowProvisioningUpdates
           xcodebuild -exportArchive -archivePath ./similarMovies.xcarchive -exportPath . -exportOptionsPlist similarMovies/Info.plist
           mv similarMovies.ipa ../similarMovies.ipa
