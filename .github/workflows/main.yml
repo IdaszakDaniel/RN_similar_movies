@@ -1,6 +1,6 @@
 name: Build Android and iOS
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   install-and-test:
@@ -10,6 +10,9 @@ jobs:
       - name: Install dependencies with yarn
         run: |
           yarn
+      - name: Run Eslint
+        run: |
+          yarn lint-ci
       - name: Run tests
         run: |
           yarn test
