@@ -16,6 +16,7 @@ const CheckBoxComponent: React.FC<Props> = ({ onChange }) => {
 
   return (
     <CheckBox
+      // @ts-ignore
       testID="checkBox"
       checked={checked}
       onIconPress={setOnPressed}
