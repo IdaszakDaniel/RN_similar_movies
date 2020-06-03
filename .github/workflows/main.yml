@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install npm dependencies
+      - name: Install dependencies with yarn
         run: |
           yarn
       - name: Run tests
@@ -16,3 +16,25 @@ jobs:
       - name: Run TypeScript
         run: |
           yarn tsc
+
+  build-ios:
+    needs: install-and-test
+    runs-on: [self-hosted, macos]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies with yarn
+        run: |
+          yarn
+      - name: Install pod dependencies
+        run: |
+          cd ios && pod install
+      - name: Build app
+        run: |
+          xcodebuild -workspace similarMovies.xcworkspace -scheme similarMovies archive -archivePath similarMovies.xcarchive -allowProvisioningUpdates
+          xcodebuild -exportArchive -archivePath ./similarMovies.xcarchive -exportPath . -exportOptionsPlist similarMovies/Info.plist
+          mv similarMovies.ipa ../similarMovies.ipa
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: myapp.ipa
+          path: ios/build/
