@@ -16,6 +16,7 @@ const CheckBoxComponent: React.FC<Props> = ({ onChange }) => {
 
   return (
     <CheckBox
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
       // @ts-ignore
       testID="checkBox"
       checked={checked}

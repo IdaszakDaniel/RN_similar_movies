@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import React from 'react'
 import { render, fireEvent } from 'react-native-testing-library'
 import MoviesList from './moviesList'
@@ -6,12 +7,12 @@ import { toContainElement } from '@testing-library/jest-native'
 expect.extend({ toContainElement })
 
 const movies = [
-  { data:{ poster_path: 'poster1.png', id: 1 }, title: 'testTitle1' },
-  { data:{ poster_path: 'poster2.png', id: 2 }, title: 'testTitle2' }
+  { data: { poster_path: 'poster1.png', id: 1 }, title: 'testTitle1' },
+  { data: { poster_path: 'poster2.png', id: 2 }, title: 'testTitle2' }
 ]
 
 const movie = [
-  { data:{ poster_path: 'poster1.png', id: 1 }, title: 'testTitle1' }
+  { data: { poster_path: 'poster1.png', id: 1 }, title: 'testTitle1' }
 ]
 
 const props = {
@@ -41,7 +42,7 @@ describe('MoviesList:', () => {
         moviesList: movie,
         selectItem: onSelectMock
       }
-      const { getByTestId } = render(<MoviesList {...props}/>)
+      const { getByTestId } = render(<MoviesList {...props} />)
 
       fireEvent(getByTestId('checkBox'), 'onChange', true)
       expect(onSelectMock).toHaveBeenCalled()
@@ -49,5 +50,3 @@ describe('MoviesList:', () => {
     })
   })
 })
-
-

@@ -6,12 +6,12 @@ import { Provider } from 'react-redux'
 import reducer from '../reducers/index'
 
 const renderWithRedux = (
-  ui, 
+  ui,
   initialState,
   store = createStore(reducer, initialState, applyMiddleware(ReduxThunk))
 ) => ({
   ...render(<Provider store={store}>{ui}</Provider>),
-  store,
+  store
 })
 
 export default renderWithRedux

@@ -31,7 +31,7 @@ const ListComponent: React.FC<Props> = ({ selectedMovies, changeCounter }) => {
 
   const { movies, moviesList = [] } = useSelector((state: stateType) => ({
     movies: state.movies,
-    moviesList: state.moviesList,
+    moviesList: state.moviesList
   }))
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const ListComponent: React.FC<Props> = ({ selectedMovies, changeCounter }) => {
     }
   }, [dispatch, movies, moviesFetched, moviesList])
 
-  const changeFavMovies = (item: singleItemType, val: Boolean): void => {
+  const changeFavMovies = (item: singleItemType, val: boolean): void => {
     changeCounter(val)
     let newFavMovies: singleItemType[] = [...favMovies]
     if (val) {

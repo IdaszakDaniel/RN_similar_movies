@@ -14,5 +14,5 @@ export default combineReducers({
   onboardingMovies,
   similarMovies,
   similarMoviesList,
-  moviesToWatch,
+  moviesToWatch
 })

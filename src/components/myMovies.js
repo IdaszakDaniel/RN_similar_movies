@@ -5,7 +5,7 @@ import MoviesListDetailed from './moviesListDetailed/moviesListDetailed'
 const MyMovies = ({ moviesList }) => <MoviesListDetailed movies={moviesList} />
 
 const mapStateToProps = ({ moviesList }) => ({
-  moviesList,
+  moviesList
 })
 
 export default connect(mapStateToProps)(MyMovies)

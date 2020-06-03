@@ -31,14 +31,15 @@ const HomeScreen = () => {
     </View>
   )
 
-  const renderSwiper = () => (isNotEmpty && isFetched ? (
-    <SwiperComponent
-      movies={similarMoviesList}
-      setMovieToWatch={movie => dispatch(setMovieToWatch(movie))}
-    />
-  ) : (
-    renderSpinner()
-  ))
+  const renderSwiper = () =>
+    isNotEmpty && isFetched ? (
+      <SwiperComponent
+        movies={similarMoviesList}
+        setMovieToWatch={movie => dispatch(setMovieToWatch(movie))}
+      />
+    ) : (
+      renderSpinner()
+    )
 
   const { container } = styles
 

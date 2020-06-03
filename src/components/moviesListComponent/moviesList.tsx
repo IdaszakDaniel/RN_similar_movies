@@ -30,8 +30,8 @@ export interface Props {
 const MoviesList: React.FC<Props> = ({ moviesList, selectItem }) => {
   const keyExtractor = (item: keyType): string => item.data.id.toString()
 
-  const setOnChange = curry((item: singleItemType, val: Boolean): void =>
-    selectItem(item, val),
+  const setOnChange = curry((item: singleItemType, val: boolean): void =>
+    selectItem(item, val)
   )
 
   const { itemContainer, itemTitle, listWrapper } = styles

@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React from 'react'
 import { createBottomTabNavigator } from 'react-navigation'
 import Ionicons from 'react-native-vector-icons/Ionicons'
@@ -20,7 +21,13 @@ const TabBar = createBottomTabNavigator(
           iconName = 'ios-person'
         }
 
-        return <Ionicons name={iconName} size={horizontal ? 20 : 25} color={tintColor} />
+        return (
+          <Ionicons
+            name={iconName}
+            size={horizontal ? 20 : 25}
+            color={tintColor}
+          />
+        )
       }
     }),
     tabBarOptions: {

@@ -101,6 +101,7 @@ const fetchSimilarMovies = () => (dispatch, getState) => {
   const result = state.onboardingMovies
     .map(el => el.title)
     .map(el => el.split('&').join('%26'))
+    // eslint-disable-next-line prettier/prettier
     .map(el => el.split('\'').join('%27'))
     .map(el => el.split(' ').join('+'))
     .join('%2C+')

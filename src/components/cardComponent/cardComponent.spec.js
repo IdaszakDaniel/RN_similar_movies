@@ -10,7 +10,7 @@ describe('Card Component', () => {
       }
     }
 
-    const tree = render(<CardComponent {...props}/>).toJSON()
+    const tree = render(<CardComponent {...props} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
@@ -21,10 +21,15 @@ describe('Card Component', () => {
       }
     }
 
-    const rendered = render(<CardComponent {...props}/>)
+    const rendered = render(<CardComponent {...props} />)
     const wrapperComponent = rendered.getByTestId('image')
-    
-    expect(wrapperComponent.props.style).toMatchObject({ width: '100%', height: '100%', })
-    expect(wrapperComponent.props.imageStyle).toMatchObject({ borderRadius: 10 })
+
+    expect(wrapperComponent.props.style).toMatchObject({
+      width: '100%',
+      height: '100%'
+    })
+    expect(wrapperComponent.props.imageStyle).toMatchObject({
+      borderRadius: 10
+    })
   })
 })

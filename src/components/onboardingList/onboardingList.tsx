@@ -47,7 +47,7 @@ const OnboardingList: React.FC<Props> = ({ selectedMovies, submit }) => {
     </View>
   )
 
-  const changeCounter = (val: Boolean): void =>
+  const changeCounter = (val: boolean): void =>
     val ? dispatch({ type: 'inc' }) : dispatch({ type: 'dec' })
 
   const { mainContainer, listContainer } = styles

@@ -1,11 +1,27 @@
 const movies = [
-  { data:{ poster_path: 'poster1.png', id: 1 }, title: 'Pulp Fiction', name: 'Pulp Fiction' },
-  { data:{ poster_path: 'poster2.png', id: 2 }, title: 'Die Hard', name: 'Die Hard' },
-  { data:{ poster_path: 'poster2.png', id: 2 }, title: 'Harry Potter', name: 'Harry Potter' }
+  {
+    data: { poster_path: 'poster1.png', id: 1 },
+    title: 'Pulp Fiction',
+    name: 'Pulp Fiction'
+  },
+  {
+    data: { poster_path: 'poster2.png', id: 2 },
+    title: 'Die Hard',
+    name: 'Die Hard'
+  },
+  {
+    data: { poster_path: 'poster2.png', id: 2 },
+    title: 'Harry Potter',
+    name: 'Harry Potter'
+  }
 ]
 
 const singleMovie = [
-  { data:{ poster_path: 'poster1.png', id: 1 }, title: 'Pulp Fiction', name: 'Pulp Fiction' }
+  {
+    data: { poster_path: 'poster1.png', id: 1 },
+    title: 'Pulp Fiction',
+    name: 'Pulp Fiction'
+  }
 ]
 
 const responses = [
@@ -41,8 +57,4 @@ const responses = [
   }
 ]
 
-export {
-  movies,
-  singleMovie,
-  responses
-}
+export { movies, singleMovie, responses }

@@ -5,7 +5,7 @@ import {
   FlatList,
   View,
   ImageBackground,
-  TouchableOpacity,
+  TouchableOpacity
 } from 'react-native'
 import { withNavigation, NavigationInjectedProps } from 'react-navigation'
 import styles from './moviesListDetailed.style'
@@ -29,7 +29,7 @@ export interface Props extends NavigationInjectedProps {
 
 export const MoviesListDetailed: React.FC<Props> = ({
   movies,
-  navigation: { navigate },
+  navigation: { navigate }
 }): JSX.Element => {
   const keyExtractor = (item: keyType): string => item.data.id.toString()
 
@@ -40,12 +40,12 @@ export const MoviesListDetailed: React.FC<Props> = ({
       imageBackground,
       imageStyle,
       title,
-      shadowView,
+      shadowView
     } = styles
 
     return (
       <TouchableOpacity
-        onPress={(): Boolean => navigate('Details')}
+        onPress={(): boolean => navigate('Details')}
         testID="item">
         <View style={itemContainer}>
           <ImageBackground

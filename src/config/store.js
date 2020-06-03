@@ -6,7 +6,5 @@ import reducers from '../reducers'
 
 export const store = createStore(
   reducers,
-  composeWithDevTools(
-    applyMiddleware(ReduxThunk)
-  )
+  composeWithDevTools(applyMiddleware(ReduxThunk))
 )
