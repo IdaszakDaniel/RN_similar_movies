@@ -1,5 +1,5 @@
-import { movies } from '../testUtils/onboardingListData'
-import { moviesFetched } from '../actions/index'
+import { movies } from '../../src/testUtils/onboardingListData'
+import { moviesFetched } from '../../src/actions/index'
 
 export const mockedFetchOnboardingMovies = () => (dispatch, getState) => {
   dispatch(moviesFetched(movies))
