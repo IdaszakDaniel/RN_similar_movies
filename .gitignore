@@ -60,4 +60,5 @@ buck-out/
 
 api_keys.js
 .env
+.env.detox
 GoogleService-Info.plist

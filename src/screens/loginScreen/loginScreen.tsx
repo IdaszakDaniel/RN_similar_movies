@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import styles from './styles'
-import Login from '../../components/loginComponent/loginComponent'
+import Login from '../../components/loginComponent/index'
 
 const LoginScreen: React.FC = () => {
   const { container } = styles

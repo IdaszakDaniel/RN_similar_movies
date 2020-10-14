@@ -20,6 +20,28 @@ jobs:
         run: |
           yarn tsc
 
+#   run-detox:
+#     needs: install-and-test
+#     runs-on: macOS-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Set up Node
+#         run: |
+#           yarn -g react-native-cli
+#           yarn -g detox-cli
+#       - name: Install Detox
+#         run: |
+#           brew tap wix/brew
+#           brew install applesimutils
+#       - name: Install Yarn Dependencies
+#         run: yarn
+#       - name: Install Pod Dependencies
+#         run: cd ./ios && pod install && cd ..
+#       - name: Detox Build
+#         run: detox build -c ios
+#       - name: Detox Test
+#         run: detox test -c ios --cleanup
+
   build-android:
     needs: install-and-test
     runs-on: ubuntu-latest

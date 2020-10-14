@@ -40,7 +40,8 @@ module.exports = {
     "camelcase": "off",
     "@typescript-eslint/camelcase": "off",
     "no-empty-function": "off",
-    "@typescript-eslint/no-empty-function": "off"
+    "@typescript-eslint/no-empty-function": "off",
+    "quotes": [2, "single", "avoid-escape"]
   },
 };
 
