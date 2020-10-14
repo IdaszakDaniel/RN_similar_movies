@@ -2,6 +2,6 @@ import loginComponent from './loginComponent'
 import mockedLoginComponent from '../../../e2e/mocks/mockedLoginComponent'
 import Config from 'react-native-config'
 
-export default Config.ENVIRONMENT === 'e2e'
-  ? mockedLoginComponent
-  : loginComponent
+const env = Config.ENVIRONMENT || null
+
+export default env === 'e2e' ? mockedLoginComponent : loginComponent

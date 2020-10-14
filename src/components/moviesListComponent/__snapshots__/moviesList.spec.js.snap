@@ -83,6 +83,7 @@ exports[`MoviesList: Flatlist element renders correctly 1`] = `
             </Text>
           </View>
           <View
+            accessibilityLabel="testTitle1 checkbox"
             accessibilityRole="checkbox"
             accessibilityState={
               Object {
@@ -224,6 +225,7 @@ exports[`MoviesList: Flatlist element renders correctly 1`] = `
             </Text>
           </View>
           <View
+            accessibilityLabel="testTitle2 checkbox"
             accessibilityRole="checkbox"
             accessibilityState={
               Object {

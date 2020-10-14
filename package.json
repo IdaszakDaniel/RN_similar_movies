@@ -9,7 +9,9 @@
     "test": "jest",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "lint-ci": "eslint '*/**/*.{js,ts,tsx}'",
-    "pod": " pod-install ios"
+    "pod": "pod-install ios",
+    "detox-build": "detox build --configuration ios",
+    "detox-test": "detox test --configuration ios"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.9.0",
@@ -62,7 +64,7 @@
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
     "babel-jest": "^24.9.0",
-    "detox": "^16.7.2",
+    "detox": "^17.9.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.11.0",
