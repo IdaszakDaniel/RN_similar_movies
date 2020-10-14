@@ -22,8 +22,10 @@ import { mockedFetchOnboardingMovies } from '../../e2e/mocks/mockedActions'
 
 import { setMovieToWatch } from './movieToWatch'
 
+const env = Config.ENVIRONMENT || null
+
 const fetchOnboardingMovies =
-  Config.ENVIRONMENT === 'e2e' ? mockedFetchOnboardingMovies : fetchMovies
+  env === 'e2e' ? mockedFetchOnboardingMovies : fetchMovies
 
 export {
   saveAccessToken,

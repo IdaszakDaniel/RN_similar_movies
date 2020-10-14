@@ -41,7 +41,7 @@ const MoviesList: React.FC<Props> = ({ moviesList, selectItem }) => {
       <View style={itemTitle}>
         <Text>{item.title}</Text>
       </View>
-      <CheckBoxComponent onChange={setOnChange(item)} />
+      <CheckBoxComponent onChange={setOnChange(item)} title={item.title} />
     </View>
   )
 
