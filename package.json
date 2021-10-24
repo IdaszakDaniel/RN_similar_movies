@@ -9,7 +9,8 @@
     "test": "jest",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "lint-ci": "eslint '*/**/*.{js,ts,tsx}'",
-    "pod": " pod-install ios"
+    "pod": " pod-install ios",
+    "prestorybook": "rnstl"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.9.0",
@@ -17,6 +18,7 @@
     "@react-native-firebase/app": "^12.9.3",
     "@react-native-firebase/remote-config": "^12.9.3",
     "@react-navigation/native": "^5.1.5",
+    "@storybook/react-native-server": "^5.3.23",
     "@types/lodash": "^4.14.149",
     "@types/react-navigation": "^2.13.10",
     "axios": "^0.19.2",
@@ -52,6 +54,12 @@
     "@babel/plugin-transform-template-literals": "^7.7.4",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@storybook/addon-actions": "^5.3",
+    "@storybook/addon-knobs": "^5.3",
+    "@storybook/addon-links": "^5.3",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.25",
+    "@storybook/react-native": "^5.3.25",
     "@testing-library/jest-native": "^3.1.0",
     "@types/jest": "^25.2.1",
     "@types/react": "^16.9.34",
@@ -61,6 +69,7 @@
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
     "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.3",
     "detox": "^16.7.2",
     "eslint": "7.14.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -76,6 +85,8 @@
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.66.2",
     "prettier": "^1.18.2",
+    "react-dom": "17.0.2",
+    "react-native-storybook-loader": "^2.0.4",
     "react-native-testing-library": "^1.13.0",
     "react-test-renderer": "17.0.2",
     "redux-devtools-extension": "^2.13.8",
@@ -83,5 +94,14 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src/components"
+      ],
+      "pattern": "**/*.stories.js",
+      "outputFile": "./storybook/storyLoader.js"
+    }
   }
 }
