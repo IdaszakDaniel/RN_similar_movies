@@ -1,4 +1,4 @@
-import { GraphRequestManager, GraphRequest } from 'react-native-fbsdk'
+// import { GraphRequestManager, GraphRequest } from 'react-native-fbsdk'
 
 export const saveAccessToken = token => ({
   type: 'SAVE_TOKEN',
@@ -27,15 +27,15 @@ export const fetchOnboardingMovies = () => (dispatch, getState) => {
     }
   }
 
-  const movieRequest = new GraphRequest(
-    '/me/movies',
-    {
-      accessToken: token
-    },
-    responseInfoCallback
-  )
+  // const movieRequest = new GraphRequest(
+  //   '/me/movies',
+  //   {
+  //     accessToken: token
+  //   },
+  //   responseInfoCallback
+  // )
 
-  new GraphRequestManager().addRequest(movieRequest).start()
+  // new GraphRequestManager().addRequest(movieRequest).start()
 }
 
 export const setOnboardingMovies = movies => ({
