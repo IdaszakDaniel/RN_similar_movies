@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import AsyncStorage from '@react-native-community/async-storage'
 import { useDispatch } from 'react-redux'
 import { withNavigation } from 'react-navigation'
-import { AccessToken, LoginManager } from 'react-native-fbsdk'
+// import { AccessToken, LoginManager } from 'react-native-fbsdk'
 import { saveAccessToken } from '../../actions'
 import LoginInterface from './loginInterface'
 
@@ -11,12 +11,12 @@ const Login = ({ navigation: { navigate } }) => {
 
   useEffect(() => {
     const bootstrapAsync = async () => {
-      let userToken = null
-      try {
-        userToken = await AsyncStorage.getItem('userToken')
-      } catch (err) {
-        console.warn(err)
-      }
+      const userToken = true
+      // try {
+      //   userToken = await AsyncStorage.getItem('userToken')
+      // } catch (err) {
+      //   console.warn(err)
+      // }
       navigate(userToken ? 'Onboarding' : 'Auth')
     }
     bootstrapAsync()
@@ -30,13 +30,13 @@ const Login = ({ navigation: { navigate } }) => {
     }
   }
 
-  const getAccesToken = () =>
-    AccessToken.getCurrentAccessToken().then(data => {
-      const token = data.accessToken.toString()
-      storeData(token)
-      dispatch(saveAccessToken(token))
-      navigate('Onboarding')
-    })
+  const getAccesToken = () => {}
+  // AccessToken.getCurrentAccessToken().then(data => {
+  //   const token = data.accessToken.toString()
+  //   storeData(token)
+  //   dispatch(saveAccessToken(token))
+  //   navigate('Onboarding')
+  // })
 
   const loginSuccess = result => {
     if (result.isCancelled) {
@@ -49,13 +49,13 @@ const Login = ({ navigation: { navigate } }) => {
     }
   }
 
-  const login = () =>
-    LoginManager.logInWithPermissions([
-      'public_profile',
-      'user_likes'
-    ]).then(loginSuccess, error =>
-      console.log(`Login fail with error: ${error}`)
-    )
+  const login = () => {}
+  // LoginManager.logInWithPermissions([
+  //   'public_profile',
+  //   'user_likes'
+  // ]).then(loginSuccess, error =>
+  //   console.log(`Login fail with error: ${error}`)
+  // )
 
   return <LoginInterface onPress={login} />
 }
